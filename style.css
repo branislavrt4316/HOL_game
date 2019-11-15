@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css?family=Asap:400,500,700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Asap, sans-serif;
+}
+
+body {
+    background-color: #009999;
+}
+
+header {
+    background: white;
+    padding: 20px;
+}
+
+header>h1 {
+    color: #292C34;
+    text-align: center;
+}
+
+.starter{
+    display: inline;
+}
+
+.afterStarter{
+    display: none;
+}
+
+#selectLevel{
+    margin: 20px auto;
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+    /*float: left;*/
+}
+
+#btSelLvl{
+    margin: 20px auto;
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    /*float: right;*/ 
+}
