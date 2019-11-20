@@ -20,28 +20,84 @@ header>h1 {
     text-align: center;
 }
 
-.starter{
-    display: inline;
-}
+/* Div u kome se nalazi lista sa nivoima i dugme za pokretanje igre */
 
-.afterStarter{
+.starter{
     display: none;
+    margin: 20px auto;
+    text-align: center;
+    width: auto;
+    max-width: 400px;
+    color: white;
+    font-size: 20px;
+    padding: 45px 20px;
+    position: relative;
 }
 
 #selectLevel{
-    margin: 20px auto;
-    padding: 10px;
+    position: absolute;
+    top: 30%;
+    left: 8%;
+    border: 1px solid gray;
+    border-radius: 4px;
     text-align: center;
     font-size: 16px;
-    /*float: left;*/
-}
+    padding: 10px;
+} 
 
 #btSelLvl{
-    margin: 20px auto;
-    padding: 10px;
-    text-align: center;
-    font-size: 16px;
+    position: absolute;
+    right: 8%;
+    top: 30%;
     border: 1px solid gray;
     border-radius: 5px;
-    /*float: right;*/ 
+    padding: 10px;
+    font-weight: bold;
+    font-size: large;
+    background-color: white;
+}
+
+#btSelLvl:hover{
+    background-color: rgb(219, 219, 219);
+}
+
+/* Div u kome se nalazi input polje za unos broja od strane korisnika
+   u dugme za proveru da li je taj broj jednak broju koji je racunar generisao */
+
+.afterStarter{
+    margin: 20px auto;
+    text-align: center;
+    width: auto;
+    max-width: 400px;
+    color: white;
+    font-size: 20px;
+    padding: 45px 20px;
+    position: relative;
+}
+
+#userNum{
+    position: absolute;
+    top: 30%;
+    left: 8%;
+    border: 1px solid gray;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 16px;
+    padding: 10px;
+}
+
+#tryNum{
+    position: absolute;
+    right: 8%;
+    top: 30%;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 10px;
+    font-weight: bold;
+    font-size: large;
+    background-color: white;
+}
+
+#tryNum:hover{
+    background-color: rgb(219, 219, 219);
 }
