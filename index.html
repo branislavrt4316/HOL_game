@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
+    <script src="app.js"></script>
     <title>HIGH or LOW game</title>
 </head>
 
@@ -25,14 +26,14 @@
         <option value="1000">Medium : 1 -> 1000</option>
         <option value="10000">Hard : 1 -> 10000</option>
     </select>
-    <button type="submit" onclick="" id="btSelLvl">START</button>
+    <button type="submit" onclick="startGame()" id="btSelLvl">START</button>
 </div>
 
 <!-- DIV after choosing lvl of game -->
 
-<div class="afterStarter" id="afterStartsDiv" >
+<div class="afterStarter hidden" id="afterStartsDiv" >
     <input type="text" name="userNum" id="userNum" placeholder="Try you number!">
-    <button type="submit" onclick="">Try</button>
+    <button type="submit" id="tryNum" onclick="">Try</button>
 </div>
 
 </body>

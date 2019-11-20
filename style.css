@@ -23,7 +23,6 @@ header>h1 {
 /* Div u kome se nalazi lista sa nivoima i dugme za pokretanje igre */
 
 .starter{
-    display: none;
     margin: 20px auto;
     text-align: center;
     width: auto;
@@ -100,4 +99,8 @@ header>h1 {
 
 #tryNum:hover{
     background-color: rgb(219, 219, 219);
+}
+
+.hidden{
+    display: none !important;
 }
