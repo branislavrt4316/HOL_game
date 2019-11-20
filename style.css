@@ -101,6 +101,7 @@ header>h1 {
     background-color: rgb(219, 219, 219);
 }
 
+/* class witch hide div after starting game */
 .hidden{
     display: none !important;
 }
