@@ -33,31 +33,22 @@
 
 <div class="afterStarter hidden" id="afterStartsDiv" >
     <input type="text" name="userNum" id="userNum" placeholder="Try you number!">
-    <button type="submit" id="tryNum" onclick="">Try</button>
+    <button type="submit" id="tryNum" onclick="getUserNum()">Try</button>
 </div>
 
 <!-- DIV with list of tries -->
 
-<div class="userListTry">
-    <div class="triesList">Try to guess the number: <b>223</b></div>
-    <div class="triesList">Lower!</div>
-    <div class="triesList">Try to guess the number: <b>554</b></div>
-    <div class="triesList">Higher!!</div>
-    <div class="triesList">Try to guess the number: <b>554</b></div>
-    <div class="triesList">Higher!!</div>
-    <div class="triesList">Try to guess the number: <b>554</b></div>
-    <div class="triesList">Higher!!</div>
-    <div class="triesList">Try to guess the number: <b>554</b></div>
-    <div class="triesList">Higher!!</div>
-    <div class="triesList">Try to guess the number: <b>554</b></div>
-    <div class="triesList">Higher!!</div>
+<div class="userListTry" id="userListTryID">
+    <div class="triesList">Try to guess the number: <b></b></div>
+    <div class="triesList"></div>
 </div>
 
 <!-- DIV with score -->
 
 <div class="scoreDiv">
-    <div id="numTried">Your attempt count is : 15</div>
-    <p class="blinked"><b>You are the WINNER!!!</b></p>
+    <div id="numTried">Your attempt count is : <br><p id="attemptNumber">0</p></div>
+    <p class="blinkedGreen"><b>You are the WINNER!</b></p>
+    <p class="blinkedRed hidden"><b>You LOST!</b></p>
     <button type="submit" id="playAgain">Play again</button>
 </div>
 

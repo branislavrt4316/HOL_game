@@ -161,8 +161,19 @@ is equal with number which one computer made */
 }
 
 /* class witch make style of blinked div "You are the winner!" */
-.blinked {
+.blinkedGreen {
     color: green;
+    animation: blinker 2s linear infinite;
+  }
+  
+  @keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+  }
+
+  .blinkedRed {
+    color: red;
     animation: blinker 2s linear infinite;
   }
   
