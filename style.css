@@ -20,10 +20,9 @@ header>h1 {
     text-align: center;
 }
 
-/* Div u kome se nalazi lista sa nivoima i dugme za pokretanje igre */
-
+/* DIV with list of levels and button for starting a game */
 .starter{
-    margin: 20px auto;
+    margin: 50px auto 20px auto;
     text-align: center;
     width: auto;
     max-width: 400px;
@@ -60,11 +59,11 @@ header>h1 {
     background-color: rgb(219, 219, 219);
 }
 
-/* Div u kome se nalazi input polje za unos broja od strane korisnika
-   u dugme za proveru da li je taj broj jednak broju koji je racunar generisao */
 
+/* DIV where stay input field for user number, and button for checking if that number 
+is equal with number which one computer made */
 .afterStarter{
-    margin: 20px auto;
+    margin: 50px auto 20px auto;
     text-align: center;
     width: auto;
     max-width: 400px;
@@ -74,6 +73,7 @@ header>h1 {
     position: relative;
 }
 
+/* class witch make style of input field where user put his number for trying */
 #userNum{
     position: absolute;
     top: 30%;
@@ -85,6 +85,7 @@ header>h1 {
     padding: 10px;
 }
 
+/* class witch make style of button for tried number */
 #tryNum{
     position: absolute;
     right: 8%;
@@ -105,3 +106,68 @@ header>h1 {
 .hidden{
     display: none !important;
 }
+
+/* class witch style list of tries of user */
+.userListTry{
+    border: 3px solid gray;
+    margin: 50px auto 20px auto;
+    text-align: center;
+    width: auto;
+    max-width: 400px;
+    height: auto;
+    color: white;
+    font-size: 20px;
+    padding: 15px 20px;
+    background-color: #6bcaca;
+}
+
+/* class witch make style of user tried */
+.triesList{
+    display: inline-block;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: black;
+}
+
+/* class witch make style of score div when user finish game */
+.scoreDiv{
+    border: 3px solid gray;
+    margin: 50px auto 20px auto;
+    text-align: center;
+    width: auto;
+    max-width: 400px;
+    height: auto;
+    color: black;
+    font-size: 20px;
+    padding: 15px 20px;
+    background-color: #6bcaca;
+}
+
+/* class witch make style of final number of tries */
+#numTried{
+    font-size: 24px;
+    color: black;
+    margin-bottom: 10px;
+}
+
+/* class witch make style of button for playing again a game */
+#playAgain{
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 10px;
+    font-weight: bold;
+    font-size: large;
+    margin-top: 15px;
+}
+
+/* class witch make style of blinked div "You are the winner!" */
+.blinked {
+    color: green;
+    animation: blinker 2s linear infinite;
+  }
+  
+  @keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+  }

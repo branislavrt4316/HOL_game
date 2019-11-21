@@ -22,9 +22,9 @@
 
 <div class="starter" id="startDiv">
     <select name="level" id="selectLevel">
-        <option value="100" selected>Easy : 1 -> 100</option>
-        <option value="1000">Medium : 1 -> 1000</option>
-        <option value="10000">Hard : 1 -> 10000</option>
+        <option value="100" selected><b>Easy</b> : 1 -> 100</option>
+        <option value="1000"><b>Medium</b> : 1 -> 1000</option>
+        <option value="10000"><b>Hard</b> : 1 -> 10000</option>
     </select>
     <button type="submit" onclick="callTwo()" id="btSelLvl">START</button>
 </div>
@@ -34,6 +34,31 @@
 <div class="afterStarter hidden" id="afterStartsDiv" >
     <input type="text" name="userNum" id="userNum" placeholder="Try you number!">
     <button type="submit" id="tryNum" onclick="">Try</button>
+</div>
+
+<!-- DIV with list of tries -->
+
+<div class="userListTry">
+    <div class="triesList">Try to guess the number: <b>223</b></div>
+    <div class="triesList">Lower!</div>
+    <div class="triesList">Try to guess the number: <b>554</b></div>
+    <div class="triesList">Higher!!</div>
+    <div class="triesList">Try to guess the number: <b>554</b></div>
+    <div class="triesList">Higher!!</div>
+    <div class="triesList">Try to guess the number: <b>554</b></div>
+    <div class="triesList">Higher!!</div>
+    <div class="triesList">Try to guess the number: <b>554</b></div>
+    <div class="triesList">Higher!!</div>
+    <div class="triesList">Try to guess the number: <b>554</b></div>
+    <div class="triesList">Higher!!</div>
+</div>
+
+<!-- DIV with score -->
+
+<div class="scoreDiv">
+    <div id="numTried">Your attempt count is : 15</div>
+    <p class="blinked"><b>You are the WINNER!!!</b></p>
+    <button type="submit" id="playAgain">Play again</button>
 </div>
 
 </body>
