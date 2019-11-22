@@ -1,7 +1,7 @@
 var levelOfGame = 100; //user lvl of game
 var compRandomNum; //random number from computer
 var userNumber; //user number
-var attemptCount = 1; //user attempt count
+var attemptCount = 0; //user attempt count
 
 /* Function witch call two functions and run them after clicking on the button START GAME */
 function callTwo(){
@@ -38,17 +38,20 @@ function getUserNum(){
     userNumber = document.getElementById("userNum").value;
     console.log("korisnikov br je: ",userNumber);
     console.log("Broj pokusaja je: ",attemptCount);
-    checkNumbers();
     attemptCount += 1;
     showUserNumber(); //calling function for showing user number
+    checkNumbers();
 }
 
+/* This function ADD DIV-S WITH USER NUMBER*/
 function showUserNumber(){
     var div = document.createElement("div");
-    var node = document.createTextNode("Try to guess the number: " + userNumber);
+    var br = document.createElement("br");
+    var node = document.createTextNode("Your number is: " + userNumber);
     div.appendChild(node);
     var element = document.getElementById("userListTryID");
     element.appendChild(div);
+    element.appendChild(br);//insert break after adding a div element
     var attribute = document.createAttribute("class");
     attribute.value = "triesList";
     div.setAttributeNode(attribute);
@@ -59,13 +62,31 @@ function checkNumbers(){
     if(userNumber > compRandomNum){
         console.log("korisnikov broj je veci");
         putAttemptsNum(attemptCount);
+        sendMessage("Higher!")
     }else if (userNumber < compRandomNum){
         console.log("korisnikov broj je manji");
         putAttemptsNum(attemptCount);
+        sendMessage("Lower!")
     }else if( userNumber == compRandomNum){
         console.log("Cestitamo, pogodili ste broj!");
         putAttemptsNum(attemptCount);
+        sendMessage("You WIN!")
     }
+}
+
+function sendMessage(compMessage){
+    var message = compMessage;
+
+    var div = document.createElement("div");
+    var br = document.createElement("br");
+    var node = document.createTextNode("" + message);
+    div.appendChild(node);
+    var element = document.getElementById("userListTryID");
+    element.appendChild(div);
+    element.appendChild(br);//insert break after adding a div element
+    var attribute = document.createAttribute("class");
+    attribute.value = "triesList";
+    div.setAttributeNode(attribute);
 }
 
 /* This function change ATTEMPT NUMBER */
