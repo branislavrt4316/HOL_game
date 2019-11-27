@@ -160,6 +160,11 @@ is equal with number which one computer made */
     margin-top: 15px;
 }
 
+#firstTwo, #firstTwoSecond{
+    color: #0047b3;
+    font-weight: bold;
+}
+
 /* class witch make style of blinked div "You are the winner!" */
 .blinkedGreen {
     color: green;
@@ -181,7 +186,15 @@ is equal with number which one computer made */
     animation: blinkBorder 1s linear infinite;
 }
 
+.scoreDivBorderBlinkWIN{ 
+    animation: blinkBorderWIN 1s linear infinite;
+}
+
   @keyframes blinkBorder { 
-    50% { border-color: #ff0000; } 
+    50% { border-color: red; } 
+ }
+
+ @keyframes blinkBorderWIN { 
+    50% { border-color: green; } 
  }
  

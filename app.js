@@ -8,26 +8,23 @@ var maxNumberOfAttempts = 0; //Max number of Attempts
 function callTwo(){
     getLvlValue();
     startGame();
+    showNumberOFAttempts();
 }
 
 /* This function GET A USER LEVEL and MAKE COMP RANDOM NUMBER */
 function getLvlValue(){
     
     levelOfGame = document.getElementById("selectLevel").value;
-    console.log(levelOfGame);
 
     if(levelOfGame == "10000"){
         compRandomNum = Math.floor(Math.random() * 10000);
-        console.log(compRandomNum);
-        maxNumberOfAttempts = 29;
+        maxNumberOfAttempts = 30;
     }else if(levelOfGame == "1000"){
         compRandomNum = Math.floor(Math.random() * 1000);
-        console.log(compRandomNum);
-        maxNumberOfAttempts = 19;
+        maxNumberOfAttempts = 20;
     }else if(levelOfGame == "100"){
         compRandomNum = Math.floor(Math.random() * 100);
-        console.log(compRandomNum);
-        maxNumberOfAttempts = 9;
+        maxNumberOfAttempts = 10;
     }
 }
 
@@ -45,8 +42,6 @@ function CallTwo(){
 /* This function GET A USER NUMBER and show that number in the list*/
 function getUserNum(){
     userNumber = document.getElementById("userNum").value;
-    console.log("korisnikov br je: ",userNumber);
-    console.log("Broj pokusaja je: ",attemptCount);
     attemptCount += 1;
     showUserNumber(); //calling function for showing user number
     checkNumbers();
@@ -69,15 +64,12 @@ function showUserNumber(){
 /* This function check if user number is equal with comp rand number */
 function checkNumbers(){
     if(userNumber > compRandomNum){
-        console.log("korisnikov broj je veci");
         putAttemptsNum(attemptCount);
         sendMessage("Higher!")
     }else if (userNumber < compRandomNum){
-        console.log("korisnikov broj je manji");
         putAttemptsNum(attemptCount);
         sendMessage("Lower!")
     }else if( userNumber == compRandomNum){
-        console.log("Cestitamo, pogodili ste broj!");
         putAttemptsNum(attemptCount);
         sendMessage("You WIN!");
         addWinTitle(); //call func for adding label WINN
@@ -110,8 +102,9 @@ function putAttemptsNum(attc){
 /* This function add LABEL "YOU ARE WIN" */
 function addWinTitle(){
     var win = document.getElementById("winner");
-
     win.classList.remove("hidden");
+    var winBorder = document.getElementById("scoreDivId");
+    winBorder.classList.add("scoreDivBorderBlinkWIN");
 }
 
 /* This function DISABLE input and button element when you finish a game */
@@ -127,11 +120,16 @@ function refreshPage(){
 
 /* This function call func disableUserTry() and activate lost label and red border */
 function checkMaxNumberOfAttempts(max){
-    if(maxNumberOfAttempts == attemptCount){
+    var maxNumberOfAttemptsINTER = maxNumberOfAttempts - 1;
+    if(maxNumberOfAttemptsINTER == attemptCount){
         disableUserTry();
         var lost = document.getElementById("lost");
         lost.classList.remove("hidden");
         var border = document.getElementById("scoreDivId");
         border.classList.add("scoreDivBorderBlink"); 
     }
+}
+
+function showNumberOFAttempts(){
+    document.getElementById("firstTwoSecond").innerHTML += maxNumberOfAttempts;   
 }
