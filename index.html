@@ -33,7 +33,7 @@
 
 <div class="afterStarter hidden" id="afterStartsDiv" >
     <input type="text" name="userNum" id="userNum" placeholder="Try you number!">
-    <button type="submit" id="tryNum" onclick="getUserNum()">Try</button>
+    <button type="submit" id="tryNum" onclick="CallTwo()">Try</button>
 </div>
 
 <!-- DIV with list of tries -->
@@ -45,10 +45,10 @@
 <!-- DIV with score -->
 
 <div class="scoreDiv">
-    <div id="numTried">Your attempt count is : <br><p id="attemptNumber">0</p></div>
-    <p class="blinkedGreen"><b>You are the WINNER!</b></p>
-    <p class="blinkedRed hidden"><b>You LOST!</b></p>
-    <button type="submit" id="playAgain">Play again</button>
+    <div id="numTried">Your attempt count is : <br><br><p id="attemptNumber">0</p></div>
+    <p class="blinkedGreen hidden" id="winner"><b>You are the WINNER!</b></p>
+    <p class="blinkedRed hidden" id="lost"><b>You LOST!</b></p>
+    <button type="submit" id="playAgain" onclick="refreshPage()">Play again</button>
 </div>
 
 </body>

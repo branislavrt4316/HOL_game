@@ -165,12 +165,6 @@ is equal with number which one computer made */
     color: green;
     animation: blinker 2s linear infinite;
   }
-  
-  @keyframes blinker {
-    50% {
-      opacity: 0;
-    }
-  }
 
   .blinkedRed {
     color: red;
@@ -182,3 +176,12 @@ is equal with number which one computer made */
       opacity: 0;
     }
   }
+
+  .scoreDiv{ 
+    animation: blinkBorder 1s linear infinite;
+}
+
+  @keyframes blinkBorder { 
+    50% { border-color: #ff0000; } 
+ }
+ 
