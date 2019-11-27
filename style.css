@@ -177,7 +177,7 @@ is equal with number which one computer made */
     }
   }
 
-  .scoreDiv{ 
+  .scoreDivBorderBlink{ 
     animation: blinkBorder 1s linear infinite;
 }
 

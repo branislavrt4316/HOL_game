@@ -125,11 +125,13 @@ function refreshPage(){
     window.location.reload();
 }
 
+/* This function call func disableUserTry() and activate lost label and red border */
 function checkMaxNumberOfAttempts(max){
     if(maxNumberOfAttempts == attemptCount){
         disableUserTry();
         var lost = document.getElementById("lost");
-    
         lost.classList.remove("hidden");
+        var border = document.getElementById("scoreDivId");
+        border.classList.add("scoreDivBorderBlink"); 
     }
 }
