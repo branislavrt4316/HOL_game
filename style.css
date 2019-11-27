@@ -198,3 +198,15 @@ is equal with number which one computer made */
     50% { border-color: green; } 
  }
  
+ .copyright {
+    position: relative;
+}
+
+#copy {
+    margin-top: 170px;
+    margin-bottom: 50px;
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    position: -ms-page;
+}

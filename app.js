@@ -42,9 +42,15 @@ function CallTwo(){
 /* This function GET A USER NUMBER and show that number in the list*/
 function getUserNum(){
     userNumber = document.getElementById("userNum").value;
-    attemptCount += 1;
-    showUserNumber(); //calling function for showing user number
-    checkNumbers();
+   var userIntNumber = parseInt(userNumber, 10);
+   
+    if(userIntNumber >= 0 && userIntNumber <= 10000){
+        attemptCount += 1;
+        showUserNumber(); //call function for showing user number
+        checkNumbers();
+    }else{
+        alert("YOU DIDN'T PUT GOOD INPUT");
+    }
 }
 
 /* This function ADD DIV-S WITH USER NUMBER*/
